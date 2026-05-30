@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pyc
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+requirements.txt/.env
+
+# Data/runtime output
+data/*.json
+!data/.gitkeep
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
