@@ -1,5 +1,13 @@
-from services import extract_cv_data, save_candidates, save_job, match_candidates
+from app.services import extract_cv_data, save_candidates, save_job, match_candidates
+from fastapi import FastAPI
+from app.routes import router
 
+app = FastAPI()
+app.include_router(router)
+
+@app.get("/")
+def home():
+    return {"message": "AI Talent System running"}
 
 CV_TEXT = """
 John Doe
