@@ -1,6 +1,8 @@
 from app.services import extract_cv_data, save_candidates, save_job, match_candidates
 from fastapi import FastAPI
 from app.routes import router
+from utils.pdf_parser import extract_text_from_pdf
+
 
 app = FastAPI()
 app.include_router(router)

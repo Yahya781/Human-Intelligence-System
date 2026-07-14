@@ -51,7 +51,7 @@ def call_ai(prompt: str) -> str:
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
-    model = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3.3-70b-instruct:free")
+    model = os.getenv("OPENROUTER_MODEL", "nvidia/nemotron-3-ultra-550b-a55b:free")
     payload = {"model": model, "messages": [{"role": "user", "content": prompt}]}
 
     max_retries = 5
@@ -233,3 +233,22 @@ def match_candidates(job_id: int):
 
     results.sort(key=lambda x: x["score"], reverse=True)
     return results[:10]
+
+
+def extract_job_data(job_text: str) -> dict:
+    prompt = f"""
+    Extract structured information from this job description.
+    Return only a valid JSON object, no markdown, nothing else:
+    {{
+        "title": "job title",
+        "required_skills": ["skill1", "skill2"],
+        "min_experience_years": 2,
+        "summary": "breif role summary"
+    }}
+
+    Job Description:
+    {job_text}
+    """
+    result = call_ai(prompt)
+    result = result.replace("```json", "").replace("```", "").strip()
+    return json.loads(result)    
