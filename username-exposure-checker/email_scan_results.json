@@ -1,0 +1,374 @@
+{
+  "username": "alinaa.shah54",
+  "total_urls_scanned": 44,
+  "urls_with_emails": 2,
+  "urls_with_errors": 1,
+  "all_exposed_emails": [
+    "Rating@Mail.ru",
+    "klubnika@velomania.ru",
+    "logo_large_plus@2x.webp",
+    "pt_logo_large_plus@2x.webp",
+    "vlad@velomania.ru"
+  ],
+  "results": [
+    {
+      "url": "https://forum.velomania.ru/member.php?username=alinaa.shah54",
+      "status": 200,
+      "emails": [
+        "vlad@velomania.ru",
+        "klubnika@velomania.ru",
+        "Rating@Mail.ru"
+      ],
+      "error": null,
+      "page_length": 19375,
+      "elapsed_ms": 926.5
+    },
+    {
+      "url": "https://www.mercadolivre.com.br/perfil/alinaa.shah54",
+      "status": 200,
+      "emails": [
+        "logo_large_plus@2x.webp",
+        "pt_logo_large_plus@2x.webp"
+      ],
+      "error": null,
+      "page_length": 159012,
+      "elapsed_ms": 1190.2
+    },
+    {
+      "url": "http://forum.igromania.ru/member.php?username=alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 2184,
+      "elapsed_ms": 860.1
+    },
+    {
+      "url": "http://www.authorstream.com/alinaa.shah54/",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 114,
+      "elapsed_ms": 268.2
+    },
+    {
+      "url": "https://admireme.vip/alinaa.shah54",
+      "status": 404,
+      "emails": [],
+      "error": null,
+      "page_length": 33494,
+      "elapsed_ms": 1412.5
+    },
+    {
+      "url": "https://alinaa.shah54.omg.lol",
+      "status": null,
+      "emails": [],
+      "error": "ConnectionError: SSLError",
+      "page_length": 0,
+      "elapsed_ms": 1451.9
+    },
+    {
+      "url": "https://archive.org/details/@alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 1872,
+      "elapsed_ms": 1565.3
+    },
+    {
+      "url": "https://auth.geeksforgeeks.org/user/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 199967,
+      "elapsed_ms": 3762.0
+    },
+    {
+      "url": "https://boardgamegeek.com/user/alinaa.shah54",
+      "status": 403,
+      "emails": [],
+      "error": null,
+      "page_length": 5803,
+      "elapsed_ms": 35887.7
+    },
+    {
+      "url": "https://bugcrowd.com/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 1237,
+      "elapsed_ms": 1617.8
+    },
+    {
+      "url": "https://developer.apple.com/forums/profile/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 202661,
+      "elapsed_ms": 4126.9
+    },
+    {
+      "url": "https://discords.com/api-v2/bio/details/alinaa.shah54",
+      "status": 404,
+      "emails": [],
+      "error": null,
+      "page_length": 27,
+      "elapsed_ms": 1994.8
+    },
+    {
+      "url": "https://discussions.apple.com/profile/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 207203,
+      "elapsed_ms": 3574.9
+    },
+    {
+      "url": "https://forums.envato.com/u/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 71261,
+      "elapsed_ms": 1733.4
+    },
+    {
+      "url": "https://forums.pcgamer.com/members/?username=alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 9022,
+      "elapsed_ms": 1770.1
+    },
+    {
+      "url": "https://hashnode.com/@alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 69889,
+      "elapsed_ms": 1321.5
+    },
+    {
+      "url": "https://hosted.weblate.org/user/alinaa.shah54/",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 4503,
+      "elapsed_ms": 1154.2
+    },
+    {
+      "url": "https://hubski.com/user/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 1496,
+      "elapsed_ms": 954.5
+    },
+    {
+      "url": "https://music.yandex/users/alinaa.shah54/playlists",
+      "status": 404,
+      "emails": [],
+      "error": null,
+      "page_length": 159540,
+      "elapsed_ms": 3183.9
+    },
+    {
+      "url": "https://odysee.com/@alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 11432,
+      "elapsed_ms": 1128.0
+    },
+    {
+      "url": "https://open.spotify.com/user/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 6148,
+      "elapsed_ms": 1031.8
+    },
+    {
+      "url": "https://php.ru/forum/members/?username=alinaa.shah54",
+      "status": 403,
+      "emails": [],
+      "error": null,
+      "page_length": 34842,
+      "elapsed_ms": 1253.8
+    },
+    {
+      "url": "https://rarible.com/marketplace/api/v4/urls/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 2821,
+      "elapsed_ms": 2713.9
+    },
+    {
+      "url": "https://replit.com/@alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 89943,
+      "elapsed_ms": 1170.4
+    },
+    {
+      "url": "https://slideshare.net/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 3036,
+      "elapsed_ms": 1024.4
+    },
+    {
+      "url": "https://splice.com/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 5560,
+      "elapsed_ms": 1128.7
+    },
+    {
+      "url": "https://tryhackme.com/p/alinaa.shah54",
+      "status": 429,
+      "emails": [],
+      "error": null,
+      "page_length": 31041,
+      "elapsed_ms": 618.7
+    },
+    {
+      "url": "https://vero.co/alinaa.shah54",
+      "status": 404,
+      "emails": [],
+      "error": null,
+      "page_length": 0,
+      "elapsed_ms": 1363.0
+    },
+    {
+      "url": "https://www.7cups.com/@alinaa.shah54",
+      "status": 202,
+      "emails": [],
+      "error": null,
+      "page_length": 2004,
+      "elapsed_ms": 745.8
+    },
+    {
+      "url": "https://www.airliners.net/user/alinaa.shah54/profile/photos",
+      "status": 202,
+      "emails": [],
+      "error": null,
+      "page_length": 2671,
+      "elapsed_ms": 1345.3
+    },
+    {
+      "url": "https://www.baby.ru/u/alinaa.shah54",
+      "status": 403,
+      "emails": [],
+      "error": null,
+      "page_length": 4925,
+      "elapsed_ms": 1665.2
+    },
+    {
+      "url": "https://www.bandcamp.com/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 3036,
+      "elapsed_ms": 1204.0
+    },
+    {
+      "url": "https://www.dailykos.com/user/alinaa.shah54",
+      "status": 403,
+      "emails": [],
+      "error": null,
+      "page_length": 0,
+      "elapsed_ms": 1351.0
+    },
+    {
+      "url": "https://www.interpals.net/alinaa.shah54",
+      "status": 404,
+      "emails": [],
+      "error": null,
+      "page_length": 39486,
+      "elapsed_ms": 1122.4
+    },
+    {
+      "url": "https://www.lesswrong.com/users/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 107893,
+      "elapsed_ms": 1078.8
+    },
+    {
+      "url": "https://www.opennet.ru/~alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 228,
+      "elapsed_ms": 1044.8
+    },
+    {
+      "url": "https://www.realmeye.com/player/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 1719,
+      "elapsed_ms": 813.6
+    },
+    {
+      "url": "https://www.reddit.com/user/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 8443,
+      "elapsed_ms": 1732.2
+    },
+    {
+      "url": "https://www.rockettube.com/alinaa.shah54",
+      "status": 404,
+      "emails": [],
+      "error": null,
+      "page_length": 412231,
+      "elapsed_ms": 2752.1
+    },
+    {
+      "url": "https://www.scribd.com/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 3036,
+      "elapsed_ms": 914.3
+    },
+    {
+      "url": "https://www.shelf.im/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 148281,
+      "elapsed_ms": 1259.1
+    },
+    {
+      "url": "https://www.svidbook.ru/user/alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 3053,
+      "elapsed_ms": 2626.9
+    },
+    {
+      "url": "https://www.threads.net/@alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 259794,
+      "elapsed_ms": 2234.2
+    },
+    {
+      "url": "https://www.tiktok.com/@alinaa.shah54",
+      "status": 200,
+      "emails": [],
+      "error": null,
+      "page_length": 1462,
+      "elapsed_ms": 815.9
+    }
+  ]
+}

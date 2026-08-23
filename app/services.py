@@ -3,8 +3,26 @@ import os
 import json
 import time
 from dotenv import load_dotenv, find_dotenv
+import chromadb
+from chromadb.utils import embedding_functions
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+chroma_client = chromadb.PersistentClient(path=os.path.join(BASE_DIR, "chroma_data"))
+
+embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+    model_name="all-MiniLM-L6-v2"
+)
+
+candidates_collection = chroma_client.get_or_create_collection(
+    name="candidates",
+    embedding_function=embedding_fn
+)
+
+jobs_collection = chroma_client.get_or_create_collection(
+    name="jobs",
+    embedding_function=embedding_fn
+)
 
 # Load .env from project tree or fallback locations
 def _load_project_env():
@@ -136,7 +154,7 @@ def extract_cv_data(cv_text: str) -> dict:
 
 
 def save_candidates(candidate_data: dict) -> dict:
-    """Insert or update a candidate record in `data/candidates.json`."""
+    """Insert or update a candidate record in `data/candidates.json` AND ChromaDB."""
     os.makedirs("data", exist_ok=True)
     candidates = []
     try:
@@ -165,6 +183,20 @@ def save_candidates(candidate_data: dict) -> dict:
     with open("data/candidates.json", "w", encoding="utf-8") as f:
         json.dump(candidates, f, indent=2)
 
+    # --- NEW: also save into ChromaDB ---
+    skills_text = ", ".join(candidate_data.get("skills", []))
+    document_text = f"{candidate_data.get('summary', '')} Skills: {skills_text}"
+
+    candidates_collection.upsert(
+        ids=[str(candidate_data["id"])],
+        documents=[document_text],
+        metadatas=[{
+            "name": candidate_data.get("name", ""),
+            "experience_years": candidate_data.get("experience_years", 0),
+            "skills": skills_text
+        }]
+    )
+
     return candidate_data
 
 
@@ -181,6 +213,18 @@ def save_job(job_data: dict):
     os.makedirs(f"{BASE_DIR}/data", exist_ok=True)
     with open(f"{BASE_DIR}/data/jobs.json", "w", encoding="utf-8") as f:
         json.dump(jobs, f, indent=2)
+
+    skills_text = ", ".join(job_data.get("required skills", []))
+    document_text = f"{job_data.get('title', '')}. {job_data.get('summary', '')} Required Skills: {skills_text}"
+
+    jobs_collection.upsert(
+        ids=[str(job_data["id"])],
+        documents= [document_text],
+        metadatas = [{
+            "title": job_data.get("title",""),
+            "required skills": skills_text
+        }]
+    )
     
     return job_data
 
@@ -252,3 +296,4 @@ def extract_job_data(job_text: str) -> dict:
     result = call_ai(prompt)
     result = result.replace("```json", "").replace("```", "").strip()
     return json.loads(result)    
+
