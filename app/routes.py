@@ -1,8 +1,35 @@
 from fastapi import APIRouter, UploadFile, File, Body
 from pydantic import BaseModel
-from app.services import extract_cv_data, save_candidates, save_job, match_candidates, extract_job_data
+import os
+import json
+from app.services import (
+    extract_cv_data, save_candidates, save_job, match_candidates, extract_job_data,
+    BASE_DIR,
+)
 from utils.pdf_parser import extract_text_from_pdf
 router = APIRouter()
+
+# ── List endpoints for the frontend ──
+
+@router.get("/candidates")
+def list_candidates():
+    path = os.path.join(BASE_DIR, "data", "candidates.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            candidates = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        candidates = []
+    return {"candidates": candidates}
+
+@router.get("/jobs")
+def list_jobs():
+    path = os.path.join(BASE_DIR, "data", "jobs.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            jobs = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        jobs = []
+    return {"jobs": jobs}
 
 class CVInput(BaseModel):
     cv_text: str
