@@ -1,8 +1,8 @@
 // ── API Client ──
-// All calls go through Vite proxy: /api → http://127.0.0.1:8000
-// This avoids CORS issues during development.
+// Dev:  Vite proxy /api → http://127.0.0.1:8000
+// Prod: VITE_API_URL env var (set on Vercel/Netlify)
 
-const BASE = '/api'
+const BASE = import.meta.env.VITE_API_URL || '/api'
 
 async function request(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, options)

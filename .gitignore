@@ -16,6 +16,9 @@ requirements.txt/.env
 data/*.json
 !data/.gitkeep
 
+# ChromaDB (regenerated from JSON via rebuild_chroma.py)
+chroma_data/
+
 # IDE/editor
 .vscode/
 .idea/
@@ -23,3 +26,9 @@ data/*.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local

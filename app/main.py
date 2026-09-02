@@ -5,12 +5,16 @@ from app.routes import router
 from utils.pdf_parser import extract_text_from_pdf
 
 
-app = FastAPI()
+app = FastAPI(title="HR Management System", version="1.0.0")
 
-# Allow the Vite dev server (and any origin) to call the API
+# Allow both dev and production origins
+# In production, set CORS_ORIGINS env var to your frontend URL
+import os
+cors_origins = os.getenv("CORS_ORIGINS", "*").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[o.strip() for o in cors_origins],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -20,7 +24,7 @@ app.include_router(router)
 
 @app.get("/")
 def home():
-    return {"message": "AI Talent System running"}
+    return {"message": "HR Management System running"}
 
 CV_TEXT = """
 John Doe

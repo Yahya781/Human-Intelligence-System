@@ -1,0 +1,9 @@
+fastapi==0.136.3
+uvicorn==0.51.0
+chromadb==1.5.9
+sentence-transformers==5.6.0
+pymupdf==1.28.0
+python-dotenv==1.2.2
+python-multipart==0.0.32
+requests==2.34.2
+pydantic==2.13.4
