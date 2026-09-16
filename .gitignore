@@ -12,11 +12,10 @@ env/
 .env
 requirements.txt/.env
 
-# Data/runtime output
-data/*.json
-!data/.gitkeep
+# Data files (source of truth — KEEP these in git)
+# data/*.json is intentionally NOT ignored so candidates/jobs ship with the repo
 
-# ChromaDB (regenerated from JSON via rebuild_chroma.py)
+# ChromaDB (regenerated from JSON via rebuild_chroma.py — do NOT commit)
 chroma_data/
 
 # IDE/editor

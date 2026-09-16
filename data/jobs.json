@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Python Backend Developer",
+    "description": "Looking for Python developer with FastAPI experience to build REST APIs with PostgreSQL.",
+    "required_skills": ["Python", "FastAPI", "PostgreSQL"],
+    "summary": "Build and maintain REST APIs using Python and FastAPI with a PostgreSQL database."
+  },
+  {
+    "id": 2,
+    "title": "Senior Full-Stack Engineer",
+    "description": "We need an experienced engineer comfortable with React, Node.js, and AWS cloud infrastructure.",
+    "required_skills": ["JavaScript", "React", "Node.js", "AWS"],
+    "summary": "Lead full-stack development across React frontend and Node.js backend on AWS."
+  },
+  {
+    "id": 3,
+    "title": "Machine Learning Engineer",
+    "description": "Join our AI team to build production ML models using TensorFlow and Python.",
+    "required_skills": ["Python", "TensorFlow", "Machine Learning"],
+    "summary": "Design, train, and deploy machine learning models for production systems."
+  },
+  {
+    "id": 4,
+    "title": "Microservices Architect",
+    "description": "Architect and build distributed microservices using Java, Spring Boot, and Kubernetes.",
+    "required_skills": ["Java", "Spring Boot", "Kubernetes", "Microservices"],
+    "summary": "Design and implement scalable microservices architecture for enterprise systems."
+  },
+  {
+    "id": 5,
+    "title": "Frontend Developer",
+    "description": "Create beautiful, responsive UIs with Vue.js and modern CSS.",
+    "required_skills": ["JavaScript", "Vue.js", "CSS"],
+    "summary": "Build responsive, accessible user interfaces using Vue.js and modern web standards."
+  },
+  {
+    "id": 6,
+    "title": "DevOps Engineer",
+    "description": "Manage CI/CD pipelines, container orchestration with Kubernetes, and cloud infrastructure on AWS.",
+    "required_skills": ["Kubernetes", "Docker", "AWS", "Python"],
+    "summary": "Own CI/CD pipelines, container orchestration, and cloud infrastructure automation."
+  },
+  {
+    "id": 7,
+    "title": "Data Scientist",
+    "description": "Analyze large datasets and build predictive models using Python, Pandas, and scikit-learn.",
+    "required_skills": ["Python", "Pandas", "Machine Learning", "Data Science"],
+    "summary": "Extract insights from large datasets and build predictive models for business decisions."
+  },
+  {
+    "id": 8,
+    "title": "Go Backend Engineer",
+    "description": "Build high-performance gRPC microservices in Go with Postgres backend.",
+    "required_skills": ["Go", "gRPC", "Postgres", "Microservices"],
+    "summary": "Develop high-throughput gRPC services in Go with a focus on performance."
+  }
+]

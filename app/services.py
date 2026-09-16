@@ -33,6 +33,68 @@ def get_jobs_collection():
         name="jobs", embedding_function=embedding_fn
     )
 
+
+def rebuild_chroma_from_json():
+    """Rebuild ChromaDB collections from the JSON data files.
+
+    Called on startup so a fresh clone (e.g. on Railway) has a populated
+    vector store even though `chroma_data/` is gitignored and empty.
+    """
+    candidates_path = os.path.join(BASE_DIR, "data", "candidates.json")
+    jobs_path = os.path.join(BASE_DIR, "data", "jobs.json")
+
+    # Load candidates
+    try:
+        with open(candidates_path, "r", encoding="utf-8") as f:
+            candidates = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        candidates = []
+
+    # Load jobs
+    try:
+        with open(jobs_path, "r", encoding="utf-8") as f:
+            jobs = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        jobs = []
+
+    candidates_collection = get_candidates_collection()
+    jobs_collection = get_jobs_collection()
+
+    # Upsert candidates (idempotent — safe to run on every startup)
+    if candidates:
+        ids = [str(c["id"]) for c in candidates]
+        documents = [
+            f"{c.get('summary', '')} Skills: {', '.join(c.get('skills', []))}"
+            for c in candidates
+        ]
+        metadatas = [
+            {
+                "name": c.get("name", ""),
+                "experience_years": c.get("experience_years", 0),
+                "skills": ", ".join(c.get("skills", [])),
+            }
+            for c in candidates
+        ]
+        candidates_collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
+
+    # Upsert jobs (idempotent — safe to run on every startup)
+    if jobs:
+        ids = [str(j["id"]) for j in jobs]
+        documents = [
+            f"{j.get('title', '')}. {j.get('summary', '')} Required Skills: {', '.join(j.get('required_skills', []))}"
+            for j in jobs
+        ]
+        metadatas = [
+            {
+                "title": j.get("title", ""),
+                "required_skills": ", ".join(j.get("required_skills", [])),
+            }
+            for j in jobs
+        ]
+        jobs_collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
+
+    print(f"✅ ChromaDB rebuilt: {len(candidates)} candidates, {len(jobs)} jobs")
+
 # Load .env from project tree or fallback locations
 def _load_project_env():
     found = find_dotenv()

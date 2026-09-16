@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "name": "Bilal Ahmed",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "experience_years": 3,
+    "summary": "Backend engineer specializing in Python web APIs and containerized deployments."
+  },
+  {
+    "id": 2,
+    "name": "Ayesha Khan",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "AWS"
+    ],
+    "experience_years": 5,
+    "summary": "Full-stack developer with strong frontend focus and cloud deployment experience."
+  },
+  {
+    "id": 3,
+    "name": "Usman Tariq",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Postgres",
+      "Kubernetes",
+      "Microservices"
+    ],
+    "experience_years": 7,
+    "summary": "Senior backend architect building distributed systems and microservices at scale."
+  },
+  {
+    "id": 4,
+    "name": "Fatima Siddiqui",
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "Machine Learning",
+      "Pandas",
+      "NumPy",
+      "Data Science"
+    ],
+    "experience_years": 4,
+    "summary": "ML engineer with research background in deep learning and NLP applications."
+  },
+  {
+    "id": 5,
+    "name": "Hamza Raza",
+    "skills": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "Azure",
+      "Blazor"
+    ],
+    "experience_years": 6,
+    "summary": "Enterprise software developer specializing in Microsoft stack and cloud solutions."
+  },
+  {
+    "id": 6,
+    "name": "Zainab Malik",
+    "skills": [
+      "JavaScript",
+      "Vue.js",
+      "CSS",
+      "HTML",
+      "Figma",
+      "UI Design"
+    ],
+    "experience_years": 3,
+    "summary": "Frontend developer with an eye for design and user experience."
+  },
+  {
+    "id": 7,
+    "name": "Ahmed Hassan",
+    "skills": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "Docker"
+    ],
+    "experience_years": 5,
+    "summary": "Backend developer building scalable web applications with async task processing."
+  },
+  {
+    "id": 8,
+    "name": "Sana Mirza",
+    "skills": [
+      "Ruby",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Sidekiq",
+      "AWS"
+    ],
+    "experience_years": 8,
+    "summary": "Senior Rails developer with deep experience in SaaS platforms and cloud infrastructure."
+  },
+  {
+    "id": 9,
+    "name": "Imran Sheikh",
+    "skills": [
+      "Go",
+      "gRPC",
+      "Kubernetes",
+      "Postgres",
+      "Microservices",
+      "golang"
+    ],
+    "experience_years": 6,
+    "summary": "Distributed systems engineer building high-performance microservices in Go."
+  },
+  {
+    "id": 10,
+    "name": "Hira Iqbal",
+    "skills": [
+      "Python",
+      "Flask",
+      "MySQL",
+      "MongoDB",
+      "REST API"
+    ],
+    "experience_years": 2,
+    "summary": "Junior backend developer eager to grow in API development and database design."
+  },
+  {
+    "id": 11,
+    "name": "Daniyal Baig",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Redux",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "experience_years": 4,
+    "summary": "MERN stack developer passionate about building responsive single-page applications."
+  },
+  {
+    "id": 12,
+    "name": "Maryam Javed",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Computer Vision",
+      "OpenCV",
+      "Machine Learning",
+      "C++"
+    ],
+    "experience_years": 5,
+    "summary": "Computer vision researcher transitioning into industry ML engineering roles."
+  },
+  {
+    "id": 13,
+    "name": "Bilal Hussain",
+    "skills": [
+      "Kotlin",
+      "Android",
+      "Jetpack Compose",
+      "Room",
+      "Retrofit",
+      "Firebase"
+    ],
+    "experience_years": 4,
+    "summary": "Android engineer building modern mobile apps with Kotlin and Jetpack Compose."
+  },
+  {
+    "id": 14,
+    "name": "Ayesha Noor",
+    "skills": [
+      "Swift",
+      "iOS",
+      "SwiftUI",
+      "Combine",
+      "CoreData",
+      "REST API"
+    ],
+    "experience_years": 5,
+    "summary": "iOS developer specializing in SwiftUI and reactive app architectures."
+  },
+  {
+    "id": 15,
+    "name": "Fahad Anwar",
+    "skills": [
+      "Python",
+      "Scikit-learn",
+      "NLP",
+      "spaCy",
+      "Transformers",
+      "Hugging Face"
+    ],
+    "experience_years": 3,
+    "summary": "NLP engineer fine-tuning transformer models for Urdu and English text processing."
+  },
+  {
+    "id": 16,
+    "name": "Saira Bukhari",
+    "skills": [
+      "SQL",
+      "dbt",
+      "Snowflake",
+      "Airflow",
+      "Tableau",
+      "Data Warehousing"
+    ],
+    "experience_years": 6,
+    "summary": "Data analytics engineer building cloud data warehouses and BI dashboards."
+  },
+  {
+    "id": 17,
+    "name": "Omar Farooq",
+    "skills": [
+      "Rust",
+      "WebAssembly",
+      "Tokio",
+      "PostgreSQL",
+      "Systems Programming"
+    ],
+    "experience_years": 4,
+    "summary": "Systems programmer building high-performance backend services in Rust and WebAssembly."
+  },
+  {
+    "id": 18,
+    "name": "Nida Aslam",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "GraphQL",
+      "TypeScript"
+    ],
+    "experience_years": 3,
+    "summary": "Frontend engineer focused on modern React frameworks and design systems."
+  },
+  {
+    "id": 19,
+    "name": "Kamran Akhtar",
+    "skills": [
+      "AWS",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Linux",
+      "Ansible"
+    ],
+    "experience_years": 7,
+    "summary": "DevOps engineer automating cloud infrastructure and deployment pipelines at scale."
+  },
+  {
+    "id": 20,
+    "name": "Rabia Sheikh",
+    "skills": [
+      "Python",
+      "Django",
+      "REST Framework",
+      "Celery",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "experience_years": 4,
+    "summary": "Backend developer building scalable Django APIs with async task queues."
+  },
+  {
+    "name": "Yahya Ahmed",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "AI Agents",
+      "LLMs",
+      "Chatbot Development",
+      "Workflow Automation",
+      "API Integration",
+      "SQL",
+      "Web Development",
+      "Frontend Development",
+      "Backend Development",
+      "Code Review",
+      "Deployment",
+      "Performance Optimization"
+    ],
+    "experience_years": 2,
+    "summary": "Software Engineer with experience in mobile app development using Flutter/Dart, AI automation with LLMs, and full-stack web development. Proven ability to design scalable solutions, integrate APIs, and optimize performance. Strong background in SQL, workflow automation, and collaborative agile environments. Achieved 2nd place in Google Developers Society hackathon.",
+    "id": 21
+  }
+]

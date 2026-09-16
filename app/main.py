@@ -1,11 +1,19 @@
-from app.services import extract_cv_data, save_candidates, save_job, match_candidates
+from app.services import extract_cv_data, save_candidates, save_job, match_candidates, rebuild_chroma_from_json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import router
 from utils.pdf_parser import extract_text_from_pdf
+from contextlib import asynccontextmanager
 
 
-app = FastAPI(title="HR Management System", version="1.0.0")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Rebuild ChromaDB from JSON on startup (fresh clones have empty chroma_data/)
+    rebuild_chroma_from_json()
+    yield
+
+
+app = FastAPI(title="HR Management System", version="1.0.0", lifespan=lifespan)
 
 # Allow both dev and production origins
 # In production, set CORS_ORIGINS env var to your frontend URL
