@@ -30,8 +30,8 @@ export default function JobList() {
       ) : (
         jobs.map(job => (
           <div key={job.id} className="card">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-              <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 12 }}>
+              <div style={{ minWidth: 0, flex: '1 1 240px' }}>
                 <div className="card-title">{job.title}</div>
                 <div style={{ color: 'var(--text-muted)', fontSize: 13, marginBottom: 8 }}>
                   Job ID: {job.id}

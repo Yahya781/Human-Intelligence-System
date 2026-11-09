@@ -28,28 +28,30 @@ export default function CandidateList() {
         <div className="alert alert-info">No candidates yet. Upload a CV to get started.</div>
       ) : (
         <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Skills</th>
-                <th>Experience</th>
-                <th>Summary</th>
-              </tr>
-            </thead>
-            <tbody>
-              {candidates.map(c => (
-                <tr key={c.id}>
-                  <td>{c.id}</td>
-                  <td><strong>{c.name}</strong></td>
-                  <td>{c.skills?.map(s => <span key={s} className="tag">{s}</span>)}</td>
-                  <td>{c.experience_years} yrs</td>
-                  <td style={{ maxWidth: 300, color: 'var(--text-muted)' }}>{c.summary}</td>
+          <div className="table-scroll">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Skills</th>
+                  <th>Experience</th>
+                  <th>Summary</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {candidates.map(c => (
+                  <tr key={c.id}>
+                    <td>{c.id}</td>
+                    <td><strong>{c.name}</strong></td>
+                    <td>{c.skills?.map(s => <span key={s} className="tag">{s}</span>)}</td>
+                    <td>{c.experience_years} yrs</td>
+                    <td style={{ maxWidth: 300, color: 'var(--text-muted)' }}>{c.summary}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </>

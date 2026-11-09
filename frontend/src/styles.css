@@ -521,19 +521,92 @@ body {
   gap: 16px;
 }
 
+/* ── Table scroll wrapper (prevents mobile overflow breakage) ── */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll .table {
+  min-width: 640px;
+}
+
 @media (max-width: 768px) {
   .grid-2 {
     grid-template-columns: 1fr;
   }
+
   .sidebar {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: auto;
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
+
+  .sidebar-header {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 10px 10px;
+    gap: 4px;
+  }
+
+  .nav-link {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
   .main-content {
     margin-left: 0;
-    padding: 32px 24px;
+    padding: 24px 16px;
+  }
+
+  .page-header h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .match-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .file-drop {
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 18px 12px;
+  }
+
+  .page-header h1 {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .match-score {
+    font-size: 17px;
   }
 }
