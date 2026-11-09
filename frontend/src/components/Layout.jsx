@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const navItems = [
   { to: '/',         icon: '🏠', label: 'Dashboard' },
@@ -10,9 +11,32 @@ const navItems = [
 ]
 
 export default function Layout({ children }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+
+  // Close the drawer whenever the route changes (after tapping a link)
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location.pathname])
+
   return (
     <div className="app-layout">
-      <aside className="sidebar">
+      <header className="mobile-topbar">
+        <button
+          className="menu-toggle"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setMenuOpen(o => !o)}
+        >
+          {menuOpen ? '✕' : '☰'}
+        </button>
+        <div className="mobile-title">HR <span>Management</span></div>
+      </header>
+
+      {menuOpen && (
+        <div className="sidebar-overlay" onClick={() => setMenuOpen(false)} />
+      )}
+
+      <aside className={`sidebar ${menuOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
           HR <span>Management</span>
         </div>
@@ -32,6 +56,7 @@ export default function Layout({ children }) {
           ))}
         </nav>
       </aside>
+
       <main className="main-content">
         {children}
       </main>
