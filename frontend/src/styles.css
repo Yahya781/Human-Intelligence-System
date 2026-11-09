@@ -540,11 +540,19 @@ body {
     grid-template-columns: 1fr;
   }
 
+  /* .app-layout is a row flex on desktop (irrelevant there since the
+     sidebar is position:fixed, out of flow). On mobile the topbar is a
+     real flex child that must stack ABOVE main-content, not beside it. */
+  .app-layout {
+    flex-direction: column;
+  }
+
   /* Sticky top bar with hamburger toggle, replacing the inline sidebar header */
   .mobile-topbar {
     display: flex;
     align-items: center;
     gap: 14px;
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 150;
